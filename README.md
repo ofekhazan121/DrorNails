@@ -1,3 +1,13 @@
+This project require a few npms
+
+### `npm install`
+### `npm install react-calendar`
+### `npm install react-cookie`
+### `npm install -D tailwindcss postcss autoprefixer`
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
