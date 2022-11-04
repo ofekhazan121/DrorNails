@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import {UserContext} from './UserContext';
 import { useCookies } from 'react-cookie';
+import {Route,Routes} from "react-router-dom"
+import Navbar from './Components/Navbar';
 
 
 
@@ -10,14 +12,16 @@ function App() {
   const [cookies] = useCookies(['user'])
   return (
   <>
-    <div>Navbar Here</div>
-    <UserContext.Provider value={cookies.user}>      
-        <div className="App">
-            <Login />
-        </div>
+  
+    <UserContext.Provider value={cookies.user}>  
+    <Navbar/>
+      <Routes>
+        <Route  path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>} />
+      </Routes> 
+      
     </UserContext.Provider>
-    <div>Footer Here</div>
-    
+  
   </>
   );
 }

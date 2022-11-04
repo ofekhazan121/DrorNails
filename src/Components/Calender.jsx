@@ -5,7 +5,7 @@ import CalendarDay from "./CalendarDay";
 
 const Calender = () => {
 
-    const [cookies,setCookie,removeCookie] = useCookies(['user'])
+    const [/*cookies*/,/*setCookie*/,removeCookie] = useCookies(['user'])
     const [date,setDate] = useState(null)
 
     const showDate = (day) => {
@@ -21,8 +21,9 @@ const Calender = () => {
                 <h2>Hello From Calender</h2>
              
                 
-                {date!=null ? date : <Calendar onClickDay={(e)=>{showDate(e)}}/>}
+                {date!=null ? date : <Calendar onClickDay={(e)=>{showDate(e)}} className="bg-gogo"/>}
                 <button onClick={()=> {setDate(null)}}>Back To Calendar</button>
+                <br />
                 <button onClick={logout}>Logout</button>
             </>
         

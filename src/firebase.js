@@ -5,6 +5,7 @@ import { getAuth } from "firebase/auth";
 
 
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDft2Ct4Ru63mbep6xhY5No2ZmoiRtH-Kk",
   authDomain: "drornails-2b66c.firebaseapp.com",

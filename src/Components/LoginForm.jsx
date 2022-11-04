@@ -8,7 +8,7 @@ import { useCookies } from 'react-cookie';
 
 const LoginForm = () =>{
 
-    const [cookies,setCookies,removeCookies] = useCookies(['user'])
+    const [/*cookies*/,setCookies,/*removeCookies*/] = useCookies(['user'])
     const email = useRef()
     const password = useRef()
     
@@ -33,7 +33,7 @@ const LoginForm = () =>{
     return(
     <>
         <form onSubmit={onSubmit}>
-            <h2>Hello Dror Please Login</h2>
+            <h2>Hello Dror Please Login </h2>
             <input type="email" ref={email} placeholder="Email..."/>
             <input type="password" ref={password} placeholder="Passowrd..."/>  
             <button type="submit">Submit</button>

@@ -29,6 +29,8 @@ const CalendarDay = (props) =>{
 
     const setTheDay = () => { 
         switch(props.day.getDay()){
+            default: setDayString("שגיאה")
+                break;
             case 0: setDayString("ראשון") 
                     break;
             case 1: setDayString('שני')
@@ -54,6 +56,8 @@ const CalendarDay = (props) =>{
 
     const setTheMonth = () => { 
         switch(props.day.getMonth()){
+            default: setMonthString("שגיאה")
+                break;
             case 0: setMonthString("ינואר") 
                     break;
             case 1: setMonthString('פברואר')
@@ -95,7 +99,7 @@ const CalendarDay = (props) =>{
         setTheDay()
         setTheMonth()
         getDayFromDb()
-    },[])
+    })
 
     return(
     <>
