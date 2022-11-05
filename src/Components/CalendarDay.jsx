@@ -113,7 +113,7 @@ const CalendarDay = (props) =>{
 
             <button onClick={openDay}>פתח יום</button>
             
-            {!isOpen ? <h1 className="text-3xl">יום סגור</h1>:<button>Submit</button> }
+            {!isOpen ? <h1 className="text-3xl">יום סגור</h1>:<button>הגש</button> }
             
         
         </div>
