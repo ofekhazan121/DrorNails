@@ -1,12 +1,18 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
+import Hero from "../Components/Hero";
 
 const Home = () => {
+  return (
+    <div className="">
+        {/*<Navbar/>*/}
+        <Hero />
+    </div>
+  );
+};
 
-    return(
-        <h1 className="text-gogo">Hello</h1>
-    )
 
 
-}
 
 export default Home
+
