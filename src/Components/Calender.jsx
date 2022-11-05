@@ -5,7 +5,7 @@ import CalendarDay from "./CalendarDay";
 
 const Calender = () => {
 
-    const [/*cookies*/,/*setCookie*/,removeCookie] = useCookies(['user'])
+    const [,,removeCookie] = useCookies(['user'])
     const [date,setDate] = useState(null)
 
     const showDate = (day) => {
@@ -17,15 +17,14 @@ const Calender = () => {
     const logout = () => {
         removeCookie('user')
     }
-    return(<>
-                <h2>Hello From Calender</h2>
-             
+    return(
+            <div className="flex flex-col">
                 
                 {date!=null ? date : <Calendar onClickDay={(e)=>{showDate(e)}} className="bg-gogo"/>}
-                <button onClick={()=> {setDate(null)}}>Back To Calendar</button>
+                {date ? <button onClick={()=> {setDate(null)}}>חזור ללוח שנה</button> : <></>}
                 <br />
-                <button onClick={logout}>Logout</button>
-            </>
+                <button className="bg-secondary w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-neutral " type="submit" onClick={logout} >התנתק</button>
+            </div>
         
     )   
 }
