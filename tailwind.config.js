@@ -4,7 +4,22 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    colors: {
+      "primary": "#E71A7F",          
+      "secondary": "#ec4899",               
+      "accent": "#1AE782",               
+      "neutral": "#191D24",              
+      "base-100": "#2A303C",               
+      "info": "#3ABFF8",               
+      "success": "#36D399",               
+      "warning": "#FBBD23",               
+      "error": "#F87272",
+    },
+    extend: {
+      backgroundImage:{
+        'business-image': 'url("/public/assets/background.jpg")'
+      }
+    },
   },
   plugins: [],
 }
