@@ -6,6 +6,7 @@ This project require a few npms
 ### `npm install -D tailwindcss postcss autoprefixer`
 ### `npm install react-typed --save`
 ### `npm install react-icons --save`
+### `npm install react-router-dom`
 
 
 
