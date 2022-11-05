@@ -1,4 +1,4 @@
-import './App.css';
+import React from 'react';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import {UserContext} from './UserContext';
@@ -8,9 +8,11 @@ import Navbar from './Components/Navbar';
 
 
 
+
 function App() {
   const [cookies] = useCookies(['user'])
   return (
+
   <>
   
     <UserContext.Provider value={cookies.user}>  
@@ -23,8 +25,10 @@ function App() {
     </UserContext.Provider>
   
   </>
-  );
-}
+)}
+
+
+
 
 export default App;
 
