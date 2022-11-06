@@ -9,7 +9,7 @@ const CalendarDay = (props) => {
 
     
     const hour = useRef('')
-    const [openHours, setOpenHours] = useState([])
+    
     const [isOpen, setIsOpen] = useState(false)
     const [dayString, setDayString] = useState('')
     const [monthString, setMonthString] = useState('')
@@ -29,10 +29,7 @@ const CalendarDay = (props) => {
         })
     }
 
-    const displayHours = async () => {
-        const docRef = await getDoc(doc(firestore, "open_appointments", ))
-        setOpenHours(docRef.data().openHours)
-    }
+    
 
     
 

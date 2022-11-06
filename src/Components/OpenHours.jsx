@@ -22,7 +22,7 @@ const OpenHours = (props) => {
 
     return (
         
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap">
             
             
             {openHours.map((hour) => {
