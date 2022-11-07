@@ -6,6 +6,8 @@ import { useCookies } from 'react-cookie';
 import {Route,Routes} from "react-router-dom"
 import Navbar from './Components/Navbar';
 
+import CalendarDay from './pages/CalendarDay';
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path={"/"} element={<Home/>}/>
         <Route path="/login" element={<Login/>} />
+        <Route path="/calendarday" element={<CalendarDay/>}/>
       </Routes> 
       
     </UserContext.Provider>
