@@ -1,5 +1,7 @@
 This project require a few npms
 
+
+### `npm i react-scroll`
 ### `npm install`
 ### `npm install react-calendar`
 ### `npm install react-cookie`
