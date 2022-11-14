@@ -18,6 +18,7 @@ const Calender = () => {
     const logout = () => {
         removeCookie('user')
     }
+    
     return (
         <div className="flex flex-col">
 ()
@@ -26,6 +27,7 @@ const Calender = () => {
             {date ? <button onClick={() => { setDate(null) }}>חזור ללוח שנה</button> : <></>}
             <br />
             <button className="bg-secondary w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-neutral " type="submit" onClick={logout} >התנתק</button>
+            <button className="bg-secondary w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-neutral " onClick={() => navigate("/upload")} >העלאת התמונה</button>
         </div>
 
     )

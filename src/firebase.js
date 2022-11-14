@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "@firebase/firestore";
 import { getAuth } from "firebase/auth";
+import {getStorage, ref, getMetadata} from 'firebase/storage';
 
 
 
@@ -18,5 +19,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const firestore = getFirestore(app)
-export const auth = getAuth(app)
+export const firestore = getFirestore(app);
+export const auth = getAuth(app);
+//, 'gs://drornails-2b66c.appspot.com/'
+export const storage = getStorage(app);
+// export const storageRef = ref(storage);
+// export const metaData = getMetadata(storageRef);
+
+

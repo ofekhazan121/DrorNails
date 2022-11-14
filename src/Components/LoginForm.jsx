@@ -33,7 +33,7 @@ const LoginForm = () =>{
    
 
     return(
-    <>
+    <div className="h-screen">
         <form onSubmit={onSubmit} className="flex flex-col w-48 m-auto gap-5">
             <h2>היי דרור בבקשה התחברי</h2>
             <input className=""
@@ -46,7 +46,7 @@ const LoginForm = () =>{
             <button className="bg-secondary w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-neutral" type="submit">התחבר</button>
         </form>
         
-    </>
+    </div>
         
     )
 }
