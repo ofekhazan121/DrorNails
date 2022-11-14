@@ -14,10 +14,16 @@ module.exports = {
       "success": "#36D399",               
       "warning": "#FBBD23",               
       "error": "#F87272",
+      "white": "#ffffff",
+      "footer": "#fcdeed"
     },
     extend: {
       backgroundImage:{
         'business-image': 'url("/public/assets/background.jpg")'
+      },
+      height: {
+        'img-height': '10%',
+        'footer-height': '50%'
       }
     },
 
