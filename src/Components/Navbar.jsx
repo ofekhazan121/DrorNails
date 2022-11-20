@@ -12,8 +12,8 @@ const Navbar = () => {
     <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-neutral">
       <h1 className="w-full text-3xl font-bold text-secondary">Dror Nails</h1>
       <ul className="hidden md:flex">
-        <Link to={"/login"} className="p-4 font-bold">
-          התחבר
+      <Link to={"/choosedate"} className="p-4 font-bold w-32 bg-primary text-center rounded">
+          הזמיני תור
         </Link>
         <Link to={"/"} className="p-4 font-bold">
           בית
@@ -34,8 +34,8 @@ const Navbar = () => {
           Dror Nails
         </h1>
         <div className="uppercase p-4 flex flex-col">
-          <Link to={"/login"} className="p-4 border-b border-base-100 ">
-            התחבר
+          <Link to={"/choosedate"} className="p-4 border-b border-base-100 ">
+            הזמיני תור
           </Link>
           <Link to={"/"} className="p-4 border-b border-base-100 ">
             בית

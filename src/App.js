@@ -7,6 +7,7 @@ import {Route,Routes} from "react-router-dom"
 import Navbar from './Components/Navbar';
 
 import CalendarDay from './pages/CalendarDay';
+import ClientChooseDate from './pages/ClientChooseDate';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path={"/"} element={<Home/>}/>
         <Route path="/login" element={<Login/>} />
         <Route path="/calendarday" element={<CalendarDay/>}/>
+        <Route path='/choosedate' element={<ClientChooseDate/>}/>
       </Routes> 
       
     </UserContext.Provider>

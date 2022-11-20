@@ -7,7 +7,6 @@ import { firestore } from '../firebase'
 
 const Openday = (props) => {
     const [checkedHours, setCheckedHours] = useState(new Array(Hours.length).fill(false));
-    const [hoursToDb, setHoursToDb] = useState(Hours)
 
     const showHours = (position) =>{
       
@@ -17,13 +16,28 @@ const Openday = (props) => {
         setCheckedHours(updatedHours)
     }
 
-    const openDay = async () => {
-
-        await setDoc(doc(firestore, "open_appointments", props.docName), {
-            hours : hoursToDb.map((hour,index) =>  ({hour , "open" : checkedHours[index], client : {}}))
+   
+    const openDay =  () => {
+        let hours = Hours
+        hours.forEach(async (hour,index)  => {
+            if(checkedHours[index] == true){
+            await setDoc(doc(firestore,"days_test",`${props.dayDocName}${hour.time}`),{
+                day: `${props.dayDocName}`,
+                hour: hour.time,
+                status:"open",
+                client:{}
+            })}else{
+                await setDoc(doc(firestore,"days_test",`${props.dayDocName}${hour.time}`),{
+                    day: `${props.dayDocName}`,
+                    hour: hour.time,
+                    status:"closed",
+                    client:{}
+            })
             
-    })
+        }})
+    }
 
+    const addDayToMonth = async () => {
         
     }
 

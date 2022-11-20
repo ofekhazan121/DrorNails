@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useCookies } from 'react-cookie';
 import Calendar from 'react-calendar'
-import CalendarDay from "./CalendarDay1";
 import { Link, useNavigate } from "react-router-dom";
 
 const Calender = () => {
@@ -10,9 +9,7 @@ const Calender = () => {
     const [date, setDate] = useState(null)
 
     const showDate = (day) => {
-        
          navigate("/calendarday",{state:day})
-        //<Link to={"/calendarday"} state={e} />
     }
 
     const logout = () => {

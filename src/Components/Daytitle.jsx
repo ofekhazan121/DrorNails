@@ -78,7 +78,7 @@ const Daytitle =(props) => {
     },[])
 
     return(
-    <h2 className="text-2xl font-bold">{dayString}, {props.day.getDate()}&nbsp;{monthString}</h2>
+    <h2 className="appointment-day">{dayString}, {props.day.getDate()}&nbsp;{monthString}</h2>
     )
 }
 
